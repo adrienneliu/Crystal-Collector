@@ -26,33 +26,81 @@
 <body>
 
     <script src="assets/javascript/game.js"></script>
-    <div class="container">
-        <div class="row">
-        <div class="col-md-12">
-            <h1>FEED MOLANG</h1>
+    <div class="container bg-danger text-white mx-auto ">
+        <div class="row bg-success text-white">
+             <div class="col-md-12 text-center">
+                 <h1>FEED MOLANG</h1>
+            </div>
         </div>
-        </div>
+
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-12 bg-warning text-dark text-center ">
      <!--Description and instructions for the players-->
-                Molang can only eat if you can pick the right foods to match the number. If you cannot match, Molang will not be able to eat. 
+                <p>Molang is tired exercising!</p>
+                <p>Can you feed him?</p>
+                <p>Molang can only eat if you pick the right foods to match the number.</p> 
+                <p>If you cannot match the number, Molang will not be able to eat. </p>
 
             </div>
-
-                
-                
         </div>
 
     <!-- Food Choices-->
+        <div class="row">
+            <div class="col-md-3">
+                <img src="assets/images/Pancake.png" style="width:200px"> 
+            </div>
+                <div class="col-md-3">
+                <img src="assets/images/hamburger.png" style="width:200px">
+            </div>
+            <div class="col-md-3">
+                <img src="assets/images/hotdog.png" style="width:200px">
+            </div>
+            <div class="col-md-3">
+                <img src="assets/images/popsicle.png" style="width:200px">
+
+            </div>
+        </div>
+
 
     <!--Match Me Box - Computer random generated number--> 
+        <div class="row">
+            <div class="col-md-6 bg-secondary text-white text-center button p-2" id="button-guess">
+                <h3>Match Me! </h3>
+            </div>  
 
+       
 
     <!--Box where player matches computer's number aka. Score-->
-
+            <div class="col-md-6 bg-info text-white text-center button" id="button-score">
+                <h3>Your Score </h3>
+            </div>  
+        </div>
     <!--Win Box-->
+        <div class="row">
+            <div class="col-md-6 bg-primary text-white text-center button" id="button-win">
+                <h3>Win</h3>
+            </div>
 
+        
     <!--Lose Box-->
+            <div class="col-md-6 bg-dark text-white button text-center p-2" id="button-lose">
+                <h3>Lose</h3>
+            </div>
+
+
+            <!-- <div class="bg-dark text-white"></div>
+                
+            </div> -->
+        </div>
+
+
+
+
+</div>
+
+
+<div class="container" id="molang-house">
+        <img id="molang" src="assets/images/molang-exercise.gif">
 
 </div>
 
