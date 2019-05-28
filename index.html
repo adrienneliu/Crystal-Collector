@@ -9,9 +9,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
@@ -47,16 +45,16 @@
     <!-- Food Choices-->
         <div class="row">
             <div class="col-md-3">
-                <img src="assets/images/Pancake.png" style="width:200px"> 
+                <button class="food" id="button-1"><img src="assets/images/Pancake.png" style="width:200px"></button> 
             </div>
                 <div class="col-md-3">
-                <img src="assets/images/hamburger.png" style="width:200px">
+                <button class="food"  id="button-2"><img src="assets/images/hamburger.png" style="width:200px"></button>
             </div>
             <div class="col-md-3">
-                <img src="assets/images/hotdog.png" style="width:200px">
+                <button class="food"  id="button-3"><img src="assets/images/hotdog.png" style="width:200px"></button>
             </div>
             <div class="col-md-3">
-                <img src="assets/images/popsicle.png" style="width:200px">
+                <button class="food"  id="button-4"><img src="assets/images/popsicle.png" style="width:200px"></button>
 
             </div>
         </div>
@@ -72,20 +70,23 @@
        
 
     <!--Box where player matches computer's number aka. Score-->
-            <div class="col-md-6 bg-info text-white text-center button" id="button-score">
+            <div class="col-md-6 bg-info text-white text-center button p-2">
                 <h3>Your Score </h3>
+                <p id="button-score"></p>
             </div>  
         </div>
     <!--Win Box-->
         <div class="row">
-            <div class="col-md-6 bg-primary text-white text-center button" id="button-win">
+            <div class="col-md-6 bg-primary text-white text-center button p-2" >
                 <h3>Win</h3>
+                <p id="button-win"></p>
             </div>
 
         
     <!--Lose Box-->
-            <div class="col-md-6 bg-dark text-white button text-center p-2" id="button-lose">
+            <div class="col-md-6 bg-dark text-white button text-center p-2" >
                 <h3>Lose</h3>
+                <p id="button-lose"></p>
             </div>
 
 
