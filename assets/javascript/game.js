@@ -1,64 +1,49 @@
-// Reset function - Player will see computer's generated guess but everything else is clear
-// When game restarts after a win/lose, the computer+food-buttons will generate a new number and win/lose/score counter will go to zero
+$(document).ready(function () {
 
-$(document).ready(function() {
+    var winCount = "";
+    var loseCount = "";
+    var scoreCount = 0;
 
-    //variables
-var winCount = ""; 
-var loseCount = "";
-var scoreCount = ""; 
+//Each food-button will generate a random number between 1-12 that stays consistant until the player wins/loses the game. Win/lose count will go up depending on whether or not player matches the number. 
 
-// computer will generate random number between 19-120
-// var computerNumber = generateComputer();
-// $("#button-guess").append(generateComputer);
+    var computerNumber = reset();
 
-// // for (var i = 0; i < 3; i++) {
-// //     var random = Math.floor(Math.random()*3);  
-// })
-// function generateComputer(){
-//     return Math.floor(Math.random() * 101 ) + 19;
+    $(".food").on("click", function () {
+        scoreCount += parseInt($(this).val());
+        $("#button-score").text(scoreCount);
 
-// }
+        if (scoreCount === computerNumber) {
+            winCount++;
+            $("#button-win").text(winCount);
+            scoreCount = 0;
+            $("#button-score").text(scoreCount);
+            computerNumber = reset();
+        }
+        if (scoreCount > computerNumber) {
+            loseCount++;
+            $("#button-lose").text(loseCount);
+            scoreCount = 0;
+            $("#button-score").text(scoreCount);
+            computerNumber = reset();
+        }
 
-var computerNumber =  Math.floor(Math.random() * 101 ) + 19;
-$("#button-guess").append(computerNumber);
+    })
 
-
-//Each food-button will generate a random number that stays consistant until the player wins/loses the game. 
-//between 1-12
-$(".food").on("click", function() {
-    
-    console.log('foodNumber > ' + $(this).val());
-
-    // if (foodNumber > computerNumber){
-    //     loseCount++ 
-
-    // }
-    
-    console.log('THIS >>>' + $(this).val());
-
-//foodNumber = parseInt(foodNumber);
 })
 
-for(var i=0 ; i<1;i++){
-    
-    $("#button-1").val(Math.floor(Math.random() * 13 ));
-    $("#button-2").val(Math.floor(Math.random() * 13 ));
-    $("#button-3").val(Math.floor(Math.random() * 13 ));
-    $("#button-4").val(Math.floor(Math.random() * 13 ));
-    
+// When game restarts after a win/lose, the computer+food-buttons will generate a new number.
+function reset() {
+    var computerGenerate = Math.floor(Math.random() * 101) + 19;
+    $("#button-guess").text(computerGenerate);
+
+    for (var i = 0; i < 1; i++) {
+
+        $("#button-1").val(Math.floor(Math.random() * 13));
+        $("#button-2").val(Math.floor(Math.random() * 13));
+        $("#button-3").val(Math.floor(Math.random() * 13));
+        $("#button-4").val(Math.floor(Math.random() * 13));
+    }
+
+//As often as function reset needs to be called, the value of computerGenerate is assigned to computerNumber as the value of reset(); 
+    return computerGenerate;
 }
-
-// function reset(){
-    
-// } 
-
-
-//pressing the food-buton, the score will display the first value and keep increasing depending on the button's value 
-
-
-
-
-
-
-})
