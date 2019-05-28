@@ -27,11 +27,32 @@ $("#button-guess").append(computerNumber);
 //Each food-button will generate a random number that stays consistant until the player wins/loses the game. 
 //between 1-12
 $(".food").on("click", function() {
-    var foodNumber =  Math.floor(Math.random() * 13 );
-    console.log('foodNumber > ' + foodNumber);
+    
+    console.log('foodNumber > ' + $(this).val());
 
+    // if (foodNumber > computerNumber){
+    //     loseCount++ 
 
+    // }
+    
+    console.log('THIS >>>' + $(this).val());
+
+//foodNumber = parseInt(foodNumber);
 })
+
+for(var i=0 ; i<1;i++){
+    
+    $("#button-1").val(Math.floor(Math.random() * 13 ));
+    $("#button-2").val(Math.floor(Math.random() * 13 ));
+    $("#button-3").val(Math.floor(Math.random() * 13 ));
+    $("#button-4").val(Math.floor(Math.random() * 13 ));
+    
+}
+
+// function reset(){
+    
+// } 
+
 
 //pressing the food-buton, the score will display the first value and keep increasing depending on the button's value 
 
