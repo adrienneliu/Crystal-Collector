@@ -4,7 +4,7 @@ $(document).ready(function () {
     var loseCount = "";
     var scoreCount = 0;
 
-//Each food-button will generate a random number between 1-12 that stays consistant until the player wins/loses the game. Win/lose count will go up depending on whether or not player matches the number. 
+    //Each food-button will generate a random number between 1-12 that stays consistant until the player wins/loses the game. Win/lose count will go up depending on whether or not player matches the number. 
 
     var computerNumber = reset();
 
@@ -17,18 +17,48 @@ $(document).ready(function () {
             $("#button-win").text(winCount);
             scoreCount = 0;
             $("#button-score").text(scoreCount);
+
+         
+
+            $("#molang").append(function () {
+                $(this).attr("src", "assets/images/molang-bbq.gif");
+            })
+            $("#molang2").append(function () {
+                $(this).attr("src", "assets/images/molang-win.gif");
+            })
             computerNumber = reset();
+
         }
         if (scoreCount > computerNumber) {
+
             loseCount++;
             $("#button-lose").text(loseCount);
             scoreCount = 0;
             $("#button-score").text(scoreCount);
+
+            $("#molang").append(function () {
+                $(this).attr("src", "assets/images/molang-sad.gif");
+            })
+            $("#molang2").append(function () {
+                $(this).attr("src", "assets/images/molang-please.gif");
+            })
             computerNumber = reset();
         }
 
-    })
+        // if (loseCount > 3) {
+        //     $("#molang").append(function(){
+        //         $(this).attr("src", "assets/images/molang-lose.gif");
+        //          })
+        // }
 
+        // if (winCount > 3) {
+        //     $("#molang").append(function(){
+        //         $(this).attr("src", "assets/images/molang-eat.gif");
+        //          })
+        // }
+
+
+    })
 })
 
 // When game restarts after a win/lose, the computer+food-buttons will generate a new number.
@@ -44,6 +74,6 @@ function reset() {
         $("#button-4").val(Math.floor(Math.random() * 13));
     }
 
-//As often as function reset needs to be called, the value of computerGenerate is assigned to computerNumber as the value of reset(); 
+    //As often as function reset needs to be called, the value of computerGenerate is assigned to computerNumber as the value of reset(); 
     return computerGenerate;
 }

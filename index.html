@@ -6,7 +6,7 @@
 
     <title>FEED MOLANG</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -17,22 +17,22 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 
 <body>
 
     <script src="assets/javascript/game.js"></script>
-    <div class="container bg-danger text-white mx-auto ">
+    <div class="container text-white mx-auto" id="titlename">
         <div class="row bg-success text-white">
-             <div class="col-md-12 text-center">
+             <div class="col-md-12 text-center" id="titlename">
                  <h1>FEED MOLANG</h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-12 bg-warning text-dark text-center ">
+            <div class="col-md-12  text-dark text-center " id="instructions">
      <!--Description and instructions for the players-->
                 <p>Molang is tired exercising!</p>
                 <p>Can you feed him?</p>
@@ -62,7 +62,7 @@
 
     <!--Match Me Box - Computer random generated number--> 
         <div class="row">
-            <div class="col-md-6 bg-secondary text-white text-center button p-2">
+            <div class="col-md-6 text-white text-center button p-2" id="match-me">
                 <h3>Match Me! </h3>
                 <p id="button-guess"></p>
             </div>  
@@ -70,21 +70,21 @@
        
 
     <!--Box where player matches computer's number aka. Score-->
-            <div class="col-md-6 bg-info text-white text-center button p-2">
+            <div class="col-md-6  text-white text-center button p-2" id="your-score">
                 <h3>Your Score </h3>
                 <p id="button-score"></p>
             </div>  
         </div>
     <!--Win Box-->
         <div class="row">
-            <div class="col-md-6 bg-primary text-white text-center button p-2" >
+            <div class="col-md-6 text-dark text-center button p-2" id="win" >
                 <h3>Win</h3>
                 <p id="button-win"></p>
             </div>
 
         
     <!--Lose Box-->
-            <div class="col-md-6 bg-dark text-white button text-center p-2" >
+            <div class="col-md-6 text-white button text-center p-2" id="lose">
                 <h3>Lose</h3>
                 <p id="button-lose"></p>
             </div>
@@ -103,7 +103,7 @@
 
 <div class="container" id="molang-house">
         <img id="molang" src="assets/images/molang-exercise.gif">
-
+        <img id="molang2"></img>
 </div>
 
 
